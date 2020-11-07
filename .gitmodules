@@ -1,0 +1,15 @@
+[submodule "ATTINY85-Firmware/lib/arduino-lib-hc-sr04"]
+	path = ATTINY85-Firmware/lib/arduino-lib-hc-sr04
+	url = https://github.com/Martinsos/arduino-lib-hc-sr04
+[submodule "ATTINY85-Firmware/lib/Arduino-Temperature-Control-Library"]
+	path = ATTINY85-Firmware/lib/Arduino-Temperature-Control-Library
+	url = https://github.com/milesburton/Arduino-Temperature-Control-Library
+[submodule "ATTINY85-Firmware/lib/OneWireHub"]
+	path = ATTINY85-Firmware/lib/OneWireHub
+	url = https://github.com/orgua/OneWireHub
+[submodule "ATTINY85-Firmware/lib/OneWire"]
+	path = ATTINY85-Firmware/lib/OneWire
+	url = https://github.com/Willena/OneWire
+[submodule "ATTINY85-Firmware/lib/Aduino-PoolReader-Library"]
+	path = ATTINY85-Firmware/lib/Aduino-PoolReader-Library
+	url = https://github.com/Willena/Aduino-PoolReader-Library
