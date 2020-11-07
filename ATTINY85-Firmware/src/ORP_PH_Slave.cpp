@@ -1,4 +1,4 @@
-#define USE_ULTRASONIC 0
+#define USE_ULTRASONIC 1
 #define USE_TEMP 1
 
 #if USE_ULTRASONIC
@@ -17,20 +17,20 @@
 #include <PoolReaderDevice.h>
 
 //ATINY85
-//#define pin_onewire 4
-//#define pin_temp_1W 1
-//#define pin_trigger 5
-//#define pin_echo 0
-//#define pin_PH A3
-//#define pin_ORP A1
-
-//Uno
-#define pin_onewire 9
-#define pin_temp_1W 10
-#define pin_trigger 11
-#define pin_echo 12
+#define pin_onewire 4
+#define pin_temp_1W 1
+#define pin_trigger 5
+#define pin_echo 0
 #define pin_PH A3
 #define pin_ORP A1
+
+//Uno
+//#define pin_onewire 9
+//#define pin_temp_1W 10
+//#define pin_trigger 11
+//#define pin_echo 12
+//#define pin_PH A3
+//#define pin_ORP A1
 
 OneWireHub hub(pin_onewire);
 PoolReaderDevice board(PoolReaderDevice::family_code, 0x00, 0x00, 0xB2, 0xDA, 0x18, 0x00);
@@ -48,7 +48,10 @@ DeviceAddress insideThermometer;
 unsigned long interval = 0;
 unsigned long previousCall = 0;
 
-void setup() {
+void updatedTriggered();
+
+void setup()
+{
   hub.attach(board);
 
 #if USE_TEMP
@@ -62,11 +65,12 @@ void setup() {
   board.setOrpRaw(0);
   board.setPhRaw(0);
   board.setWaterLevel(0);
-  
+
   updatedTriggered();
 }
 
-void updatedTriggered() {
+void updatedTriggered()
+{
 
 #if USE_TEMP
   sensors.requestTemperatures();
@@ -86,7 +90,8 @@ void updatedTriggered() {
   interval = board.state.interval * 1000;
 }
 
-void loop() {
+void loop()
+{
 
   // put your main code here, to run repeatedly:
   // following function must be called periodically
@@ -127,5 +132,4 @@ void loop() {
     previousCall = currentTime;
     updatedTriggered();
   }
-
 }
