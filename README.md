@@ -29,6 +29,8 @@ Documents and Websites:
 - Temperature Compensation for pH mesurments: https://www.hach.com/asset-get.download.jsa?id=17525673904
 - Example of pH mesurement circuit and explanations: https://www.e-tinkers.com/2019/11/measure-ph-with-a-low-cost-arduino-ph-sensor-board/
 - Usable instruction to setup the Arduino environment: https://makersportal.com/blog/2018/5/19/attiny85-arduino-board-how-to-flash-the-arduino-bootloader-and-run-a-simple-sketch
+- Digispark ATTNIY85 board silk screen: https://i.stack.imgur.com/smi4Y.jpg
+- Digispark ATTINY85 board pcb + schematic: https://i.imgur.com/GQbOyGP.png
 
 
 Arduino / CPP libraries:
